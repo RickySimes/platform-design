@@ -1,4 +1,30 @@
+# The platform as a product: who it is for, what it solves for them, and what it will not do.
+# Owner: the platform team. Read by the design check (rules P1 to P6).
 name: Internal developer platform
+mission: >-
+  A product team goes from an idea to a safe change in production in one day,
+  without waiting for another team, and an agent can do the routine part of that work inside the same limits.
+owner: platform
+productOwner: Platform product manager (platform team)
 
-mission: Product teams ship safely
+users:
+  - id: product-developer
+    kind: human
+    who: Developers in stream-aligned teams such as team-checkout
+    problems:
+      - problem: A new service waits about two weeks for a namespace, a pipeline and DNS, through four tickets.
+        evidence: Ticket history for the last ten new services, read in the first week
+      - problem: Nobody knows which of three deployment pipelines is the supported one.
+        evidence: Interviews with five developers in three teams
+  - id: team-lead
+    kind: human
+    who: Leads of product teams who answer for cost and incidents
+    problems:
+      - problem: They cannot see what their team spends on cloud and on AI tools.
+        evidence: Asked in the quarterly planning review; finance sends one total per month
+
+nonGoals:
+  - Running the product teams' services for them. Teams own and operate what they build.
+  - A portal before the APIs. The portal shows and approves what the APIs and Git already do.
+  - Supporting every tool a team has ever used. One supported path per need; others are on their own.
 
