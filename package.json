@@ -1,0 +1,13 @@
+{
+  "name": "platform-design",
+  "private": true,
+  "description": "A platform team's design, as files a check can read.",
+  "type": "module",
+  "engines": { "node": ">=20" },
+  "scripts": {
+    "check": "node scripts/check.mjs"
+  },
+  "dependencies": {
+    "yaml": "2.9.1"
+  }
+}
